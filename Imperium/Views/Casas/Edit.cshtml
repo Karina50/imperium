@@ -1,0 +1,113 @@
+﻿@model Imperium.Models.Casa
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<section class="section contact-me" data-section="section3">
+    <div class="container">
+        <div class="section-heading">
+            <h2 style="text-align:center;">Editar un registro de una casa</h2>
+        </div>
+        <div class="row">
+            <div class="right-content">
+                <div class="container">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Idcasa" />
+                        <div class="form-group col-md-12">
+                            <fieldset>
+                                <label asp-for="Nombre" class="control-label">Nombre de la casa:</label>
+                                <input asp-for="Nombre" class="form-control" />
+                                <span asp-validation-for="Nombre" class="text-danger"></span>
+                            </fieldset>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <fieldset>
+                                <label asp-for="Precio" class="control-label">Precio:</label>
+                                <input asp-for="Precio" class="form-control" />
+                                <span asp-validation-for="Precio" class="text-danger"></span>
+                            </fieldset>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <fieldset>
+                                <label asp-for="DescripcionPropiedad" class="control-label">Descripcion de la propiedad:</label>
+                                <input asp-for="DescripcionPropiedad" class="form-control" />
+                                <span asp-validation-for="DescripcionPropiedad" class="text-danger"></span>
+                            </fieldset>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <fieldset>
+                                <select asp-for="RentaOventa" class="form-select form-select-lg form-control" aria-label=".form-select-lg example">
+                                    <option selected>Selecciona:</option>
+                                    <option value="Renta">Renta</option>
+                                    <option value="Venta">Venta</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <fieldset>
+                                <select asp-for="TipoVivienda" class="form-select form-select-lg form-control" aria-label=".form-select-lg example">
+                                    <option selected>Selecciona:</option>
+                                    <option value="Departamento">Departamento</option>
+                                    <option value="Casa">Casa</option>
+                                    <option value="Terreno">Terreno</option>
+                                    <option value="Comercial">Comercial</option>
+                                    <option value="Oficina">Oficina</option>
+
+                                </select>
+                            </fieldset>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <fieldset>
+                                <label asp-for="Superficie" class="control-label">Superficie:</label>
+                                <input asp-for="Superficie" class="form-control" />
+                                <span asp-validation-for="Superficie" class="text-danger"></span>
+                            </fieldset>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <fieldset>
+                                <label asp-for="Caracteristicas" class="control-label">Caracteristicas:</label>
+                                <input asp-for="Caracteristicas" class="form-control" />
+                                <span asp-validation-for="Caracteristicas" class="text-danger"></span>
+                            </fieldset>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <fieldset>
+                                <label asp-for="Coordenadas" class="control-label">Coordenadas:</label>
+                                <input asp-for="Coordenadas" class="form-control" />
+                                <span asp-validation-for="Coordenadas" class="text-danger"></span>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="right-image">
+                                <img src="~/Imagenes/@Html.DisplayFor(modelItem => Model.Imagen)" alt="Mountain Reflection" />
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <fieldset>
+                                <label asp-for="Imagen" class="control-label">Imagen:</label>
+                                <input type="file" name="archivo" asp-for="Imagen" class="form-control" />
+                                <span asp-validation-for="Imagen" class="text-danger"></span>
+                            </fieldset>
+                        </div>
+
+                        <br />
+                        <div class="form-group">
+                            <input type="submit" value="Guardar" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<div>
+    <a asp-action="Index">Regresar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

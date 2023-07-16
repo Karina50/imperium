@@ -1,0 +1,108 @@
+﻿@model IEnumerable<Imperium.Models.Casa>
+
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="~/assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="~/assets/css/tooplate-style.css" />
+    <link rel="stylesheet" href="~/assets/css/owl.css" />
+    <link rel="stylesheet" href="~/assets/css/lightbox.css" />
+</head>
+
+<br />
+
+    <h1 style="text-align:center; color: white;">Administración de las casas</h1>
+
+    <br />
+
+    <center>
+        <div class="white-button">
+            <a asp-action="Create">Registrar nueva casa</a>
+        </div>
+    </center>
+
+    <br />
+
+    <section class="section contact-me" data-section="section3">
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table table-info table-hover table-bordered border-light table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Nombre)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Precio)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.DescripcionPropiedad)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.RentaOventa)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.TipoVivienda)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Superficie)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Caracteristicas)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Coordenadas)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Imagen)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Nombre)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Precio)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DescripcionPropiedad)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.RentaOventa)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TipoVivienda)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Superficie)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Caracteristicas)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Coordenadas)
+                                </td>
+                                <td>
+                                    <img src="~/Imagenes/@Html.DisplayFor(modelItem => item.Imagen)" width="70" height="70" />
+                                </td>
+                                <td>
+                                    <div class="white-button">
+                                        <a asp-action="Edit" asp-route-id="@item.Idcasa">Editar</a>
+                                        <a asp-action="Details" asp-route-id="@item.Idcasa">Detalles</a>
+                                        <a asp-action="Delete" asp-route-id="@item.Idcasa">Borrar</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>

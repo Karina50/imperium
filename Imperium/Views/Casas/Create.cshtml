@@ -1,0 +1,115 @@
+﻿@model Imperium.Models.Casa
+
+
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="~/assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="~/assets/css/tooplate-style.css" />
+    <link rel="stylesheet" href="~/assets/css/owl.css" />
+    <link rel="stylesheet" href="~/assets/css/lightbox.css" />
+</head>
+
+<section class="section contact-me" data-section="section3">
+    <div class="container">
+            <div class="section-heading">
+                <h2 style="text-align:center;">Formulario para registrar casa</h2>
+            </div>
+            <div class="row">
+                <div class="right-content">
+                    <div class="container">
+                        <form asp-action="Create" enctype="multipart/form-data">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group col-md-12">
+                                <fieldset>
+                                    <label asp-for="Nombre" class="control-label">Nombre de la casa:</label>
+                                    <input asp-for="Nombre" class="form-control" />
+                                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                                </fieldset>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <fieldset>
+                                    <label asp-for="Precio" class="control-label">Precio:</label>
+                                    <input asp-for="Precio" class="form-control" />
+                                    <span asp-validation-for="Precio" class="text-danger"></span>
+                                </fieldset>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <fieldset>
+                                    <label asp-for="DescripcionPropiedad" class="control-label">Descripcion de la propiedad:</label>
+                                    <input asp-for="DescripcionPropiedad" class="form-control" />
+                                    <span asp-validation-for="DescripcionPropiedad" class="text-danger"></span>
+                                </fieldset>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <fieldset>
+                                    <select asp-for="RentaOventa" class="form-select form-select-lg form-control" aria-label=".form-select-lg example">
+                                        <option selected>Selecciona:</option>
+                                        <option value="Renta">Renta</option>
+                                        <option value="Venta">Venta</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <fieldset>
+                                    <select asp-for="TipoVivienda" class="form-select form-select-lg form-control" aria-label=".form-select-lg example">
+                                        <option selected>Selecciona:</option>
+                                        <option value="Departamento">Departamento</option>
+                                        <option value="Casa">Casa</option>
+                                        <option value="Terreno">Terreno</option>
+                                        <option value="Comercial">Comercial</option>
+                                        <option value="Oficina">Oficina</option>
+
+                                    </select>
+                                </fieldset>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <fieldset>
+                                    <label asp-for="Superficie" class="control-label">Superficie:</label>
+                                    <input asp-for="Superficie" class="form-control" />
+                                    <span asp-validation-for="Superficie" class="text-danger"></span>
+                                </fieldset>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <fieldset>
+                                    <label asp-for="Caracteristicas" class="control-label">Caracteristicas:</label>
+                                    <input asp-for="Caracteristicas" class="form-control" />
+                                    <span asp-validation-for="Caracteristicas" class="text-danger"></span>
+                                </fieldset>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <fieldset>
+                                    <label asp-for="Coordenadas" class="control-label">Coordenadas:</label>
+                                    <input asp-for="Coordenadas" class="form-control" />
+                                    <span asp-validation-for="Coordenadas" class="text-danger"></span>
+                                </fieldset>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <fieldset>
+                                    <label asp-for="Imagen" class="control-label">Imagen:</label>
+                                    <input type="file" name="archivo" asp-for="Imagen" class="form-control" />
+                                    <span asp-validation-for="Imagen" class="text-danger"></span>
+                                </fieldset>
+                            </div>
+                            <br />
+                            <div class="col-md-12 white-button">
+                                <fieldset>
+                                    <button type="submit" value="Create" id="form-submit">
+                                        Registrar
+                                    </button>
+                                </fieldset>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</section>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

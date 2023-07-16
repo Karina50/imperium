@@ -1,0 +1,51 @@
+﻿@model Imperium.Models.RegistroUser
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<section class="section contact-me" data-section="section3">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Iniciar Sesion</h2>
+            <div class="line-dec"></div>
+        </div>
+        <div class="row">
+            <div class="right-content">
+                <div class="container">
+                    <Center>
+                        <div class="card text-dark bg-light mb-3 border-light" style="max-width: 18rem;">
+                            <div class="card-body">
+                                <form asp-action="Onpost" method="Post">
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                            <label asp-for="Correo" class="control-label">Correo:</label>
+                                            <input asp-for="Correo" name="Cor" class="form-control" type="email" placeholder="Escriba su correo" required="" />
+                                            <span asp-validation-for="Correo" class="text-danger"></span>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                            <label asp-for="Contra" class="control-label">Contraseña:</label>
+                                            <input asp-for="Contra" name="Con" class="form-control" type="password" placeholder="Escriba su contraseña" required="" />
+                                            <span asp-validation-for="Contra" class="text-danger"></span>
+                                        </fieldset>
+                                    </div>
+                                    <br />
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                            <button type="submit" id="form-submit" class="button">
+                                                Iniciar Sesion
+                                            </button>
+                                        </fieldset>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </Center>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,71 @@
+﻿@model Imperium.Models.Contacto
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+    <link rel="stylesheet" href="~/assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="~/assets/css/tooplate-style.css" />
+    <link rel="stylesheet" href="~/assets/css/owl.css" />
+    <link rel="stylesheet" href="~/assets/css/lightbox.css" />
+</head>
+
+    <section class="section contact-me" data-section="section3">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Contactanos</h2>
+                <div class="line-dec"></div>
+                <span>Escribe tus datos para que te contactemos</span>
+            </div>
+            <div class="row">
+                <div class="right-content">
+                    <div class="container">
+                        <form asp-action="Create">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <label asp-for="Nombre" class="control-label">Nombre del solicitante:</label>
+                                    <input asp-for="Nombre" class="form-control" placeholder="Escriba su nombre" required="" />
+                                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <label asp-for="Causa" class="control-label">Causa:</label>
+                                    <input asp-for="Causa" class="form-control" type="text" placeholder="Escriba la causa" required="" />
+                                    <span asp-validation-for="Causa" class="text-danger"></span>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <label asp-for="Comentario" class="control-label">Comentarios:</label>
+                                    <textarea asp-for="Comentario" rows="6" class="form-control" placeholder="Escriba su mensaje" required=""></textarea>
+                                    <span asp-validation-for="Comentario" class="text-danger"></span>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <label asp-for="Correo" class="control-label">Correo:</label>
+                                    <input asp-for="Correo" class="form-control" />
+                                    <span asp-validation-for="Correo" class="text-danger"></span>
+                                </fieldset>
+                            </div>
+                            <br />
+                            <div class="col-md-12 white-button">
+                                <fieldset>
+                                    <button type="submit" value="Create" id="form-submit">
+                                        Eviar Mensaje
+                                    </button>
+                                </fieldset>
+                            </div>
+                        </form>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+                        @section Scripts {
+                            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+                        }
