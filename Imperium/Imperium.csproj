@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\Imagenes\" />
+    <Folder Include="wwwroot\lib\new_lib\" />
   </ItemGroup>
 
 </Project>
