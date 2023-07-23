@@ -6,12 +6,44 @@
     ViewData["Title"] = "Index";
 }
 
+<section class="section my-services" data-section="section2">
+    <div class="container">
+        <div class="col-12">
+            <div class="row">
+                <center>
+                    <div class="col-10">
+                        <div class="section-heading">
+                            <h1>Catalogo de casas</h1>
+                            <div class="line-dec"></div>
+                        </div>
+                        <div class="row">
+                            @foreach (var item in Model)
+                            {
+                                <div class="card text-center text-dark bg-light border-light " style="width: 18rem;">
+                                    <img src="~/Imagenes/@Html.DisplayFor(modelItem => item.Imagen)" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h5>
+                                        <p class="card-text text-dark">@Html.DisplayFor(modelItem => item.Precio)</p>
+                                        <div class="white-button">
+                                            <a asp-action="Consulta_detalle" asp-route-id="@item.Idcasa">Conocer más</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                 </center>
+                
+            </div>
+
+        </div>
+    </div>
+</section>
 
 
 
 
-
-        <head>
+       @* <head>
             <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
             <link rel="stylesheet" href="~/css/site.css" />
             <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
@@ -20,8 +52,10 @@
             <link rel="stylesheet" href="~/assets/css/owl.css" />
             <link rel="stylesheet" href="~/assets/css/lightbox.css" />
         </head>
+*@
 
-        <section class="section my-services" data-section="section2">
+
+    @*    <section class="section my-services" data-section="section2">
             <div class="container">
                 <center>
                     <div class="section-heading">
@@ -45,4 +79,4 @@
                     </div>
                 </center>
             </div>
-        </section>
+        </section>*@
