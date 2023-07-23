@@ -100,14 +100,14 @@
                                         }
                                         else
                                         {
-                                            @Html.Raw("Bienvenido : " + Context.Session.GetString("Sesion1"))
-                                            ;
+                                           
 
                                         <li><a asp-area="" asp-controller="Home" asp-action="Index" class="nav-item nav-link">Inicio</a></li>
                                         <li><a asp-area="" asp-controller="Contactoes" asp-action="Create" class="nav-item nav-link">Contacto</a></li>
                                         <li><a asp-area="" asp-controller="RegistroUsers" asp-action="Create" class="nav-item nav-link">Registro Usuario</a></li>
                                         <li><a asp-area="" asp-controller="Casas" asp-action="Index" class="nav-item nav-link">Panel de administracion de las casas</a></li>
                                         <li><a asp-area="" asp-controller="Catalogo" asp-action="Index" class="nav-item nav-link">Catalogo de las casas</a></li>
+                                    <li><a asp-area="" asp-controller="Sesion" asp-action="LogOut" class="nav-item nav-link">Mensajes</a></li>
                                         <li><a asp-area="" asp-controller="Sesion" asp-action="LogOut" class="nav-item nav-link">Cerrar Sesion</a></li>
 
                                         }
