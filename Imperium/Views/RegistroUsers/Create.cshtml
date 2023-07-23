@@ -7,106 +7,132 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
     <link rel="stylesheet" href="~/assets/css/fontawesome.css" />
-    <link rel="stylesheet" href="~/assets/css/tooplate-style.css" />
-    <link rel="stylesheet" href="~/assets/css/owl.css" />
-    <link rel="stylesheet" href="~/assets/css/lightbox.css" />
+    
+
 </head>
 
 
-    <section class="section contact-me" data-section="section3">
-        <center>
-            <div class="container">
-                <div class="section-heading">
-                    <h2>Registro Usuario</h2>
-                    <div class="line-dec"></div>
-                    <span>Registrate para poder iniciar sesion, si ya tienes una cuenta dale clic al que dice iniciar sesion</span>
-                </div>
-                <div class="row">
-                    <div class="right-content">
-                        <div class="container">
-                            <form asp-action="Create">
-                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                                <div class="col-md-12">
-                                    <fieldset>
-                                        <label asp-for="Nombre" class="control-label">Nombre:</label>
-                                        <input asp-for="Nombre" class="form-control" type="text" placeholder="Escriba su nombre" required="" />
-                                        <span asp-validation-for="Nombre" class="text-danger"></span>
-                                    </fieldset>
-                                </div>
-                                <div class="col-md-12">
-                                    <fieldset>
-                                        <label asp-for="Correo" class="control-label">Correo:</label>
-                                        <input asp-for="Correo" class="form-control" type="email" placeholder="Escriba su correo" required="" />
-                                        <span asp-validation-for="Correo" class="text-danger"></span>
-                                    </fieldset>
-                                </div>
-                                <div class="col-md-12">
-                                    <fieldset>
-                                        <label asp-for="Telefono" class="control-label">Telefono:</label>
-                                        <input asp-for="Telefono" class="form-control" type="number" placeholder="Escriba su telefono" required="" />
-                                        <span asp-validation-for="Telefono" class="text-danger"></span>
-                                    </fieldset>
-                                </div>
-                                <div class="col-md-12">
-                                    <fieldset>
-                                        <label asp-for="Usuario" class="control-label">Usuario:</label>
-                                        <input asp-for="Usuario" class="form-control" type="text" placeholder="Escriba su usuario" required="" />
-                                        <span asp-validation-for="Usuario" class="text-danger"></span>
-                                    </fieldset>
-                                </div>
-                                <div class="col-md-12">
-                                    <fieldset>
-                                        <label asp-for="Contra" class="control-label">Contraseña:</label>
-                                        <input asp-for="Contra" class="form-control" type="password" placeholder="Escriba su contraseña" required="" />
-                                        <span asp-validation-for="Contra" class="text-danger"></span>
-                                    </fieldset>
-                                </div>
-                                
-                                <div class="col-md-12">
-                                    <fieldset>
-                                        <label asp-for="Pais" class="control-label">Pais:</label>
-                                        <input asp-for="Pais" class="form-control" type="text" placeholder="Escriba su pais de procedencia" required="" />
-                                        <span asp-validation-for="Pais" class="text-danger"></span>
-                                    </fieldset>
-                                </div>
-                                <div class="col-md-12">
-                                    <fieldset>
-                                        <label asp-for="Estado" class="control-label">Estado:</label>
-                                        <input asp-for="Estado" class="form-control" type="text" placeholder="Escriba el estado al que pertenece" required="" />
-                                        <span asp-validation-for="Estado" class="text-danger"></span>
-                                    </fieldset>
-                                </div>
-                                <div class="col-md-12">
-                                    <fieldset>
-                                        <label asp-for="Localidad" class="control-label">Localidad:</label>
-                                        <input asp-for="Localidad" class="form-control" type="text" placeholder="Escriba la localidad en la que habita" required="" />
-                                        <span asp-validation-for="Localidad" class="text-danger"></span>
-                                    </fieldset>
-                                </div>
 
-                                @*<div class="col-md-12">
-                                <fieldset>
-                                    <label asp-for="Fotografia" class="control-label"></label>
-                                    <input type="file" name="archivo" asp-for="Fotografia" class="form-control" />
-                                    <span asp-validation-for="Fotografia" class="text-danger"></span>
-                                </fieldset>
-                            </div>*@
-
-                                <br />
-                                <div class="col-md-12">
-                                    <fieldset>
-                                        <button type="submit" value="Create" id="form-submit" class="button">
-                                            Registrar
-                                        </button>
-                                    </fieldset>
-                                </div>
-                            </form>
+<div class="contact wow fadeInUp">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>¿Nuevo empleado?</p>
+            <h2>Creación de nuevo usuario</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="flaticon-address"></i>
+                        <div class="contact-text">
+                            <h2>Usa contraseñas con signos, números y caracteres especiales.</h2>
+                            <p>Ejemplo: H0l4Mund0!.</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="flaticon-call"></i>
+                        <div class="contact-text">
+                            <h2>No hace falta escribir "+52".</h2>
+                            <p>Los números tienen clave del país automática.</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="flaticon-send-mail"></i>
+                        <div class="contact-text">
+                            <h2>Recuerda usar el arroba el correo.</h2>
+                            <p>Ejemplo: imperium@gmail.com</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </center>
-        </section>
+            <div class="col-md-6">
+                <div class="contact-form">
+                    <div id="success"></div>
+                    <div class="row">
+                        <div class="right-content">
+                            <div class="container">
+                                <form asp-action="Create">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                            <label asp-for="Nombre" class="control-label">Nombre:</label>
+                                            <input asp-for="Nombre" class="form-control" type="text" placeholder="Escriba su nombre" required="" />
+                                            <span asp-validation-for="Nombre" class="text-danger"></span>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                            <label asp-for="Correo" class="control-label">Correo:</label>
+                                            <input asp-for="Correo" class="form-control" type="email" placeholder="Escriba su correo" required="" />
+                                            <span asp-validation-for="Correo" class="text-danger"></span>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                            <label asp-for="Telefono" class="control-label">Telefono:</label>
+                                            <input asp-for="Telefono" class="form-control" type="number" placeholder="Escriba su telefono" required="" />
+                                            <span asp-validation-for="Telefono" class="text-danger"></span>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                            <label asp-for="Usuario" class="control-label">Usuario:</label>
+                                            <input asp-for="Usuario" class="form-control" type="text" placeholder="Escriba su usuario" required="" />
+                                            <span asp-validation-for="Usuario" class="text-danger"></span>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                            <label asp-for="Contra" class="control-label">Contraseña:</label>
+                                            <input asp-for="Contra" class="form-control" type="password" placeholder="Escriba su contraseña" required="" />
+                                            <span asp-validation-for="Contra" class="text-danger"></span>
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                            <label asp-for="Pais" class="control-label">Pais:</label>
+                                            <input asp-for="Pais" class="form-control" type="text" placeholder="Escriba su pais de procedencia" required="" />
+                                            <span asp-validation-for="Pais" class="text-danger"></span>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                            <label asp-for="Estado" class="control-label">Estado:</label>
+                                            <input asp-for="Estado" class="form-control" type="text" placeholder="Escriba el estado al que pertenece" required="" />
+                                            <span asp-validation-for="Estado" class="text-danger"></span>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                            <label asp-for="Localidad" class="control-label">Localidad:</label>
+                                            <input asp-for="Localidad" class="form-control" type="text" placeholder="Escriba la localidad en la que habita" required="" />
+                                            <span asp-validation-for="Localidad" class="text-danger"></span>
+                                        </fieldset>
+                                    </div>
+
+                             
+
+                                    <br />
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                            <!-- <a class="btn" href="/Contactoes/Create">Conoce más</a>-->
+                                            <button type="submit" value="Create" id="form-submit" class="btn">
+                                                Registrar
+                                            </button>
+                                        </fieldset>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
                 @section Scripts {
                     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
