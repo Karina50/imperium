@@ -1,7 +1,8 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
+
 
     <!-- New CSS Libraries -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -13,7 +14,7 @@
     <link href="/lib/new_lib/slick/slick.css" rel="stylesheet">
     <link href="/lib/new_lib/slick/slick-theme.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="~/css/style.css"/>
+    <link rel="stylesheet" href="~/css/style.css" />
 </head>
 
 
@@ -80,43 +81,54 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    
-                       <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                           <div class="navbar-nav mr-auto">
-                                
 
-                                    @{
-                                        @using Microsoft.AspNetCore.Http;
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto">
 
-                                        if (string.IsNullOrEmpty(Context.Session.GetString("Sesion1")))
-                                        {
-                                            
 
-                                            <li><a asp-area="" asp-controller="Home" asp-action="Index" class="nav-item nav-link">Inicio</a></li>
-                                        <li><a asp-area="" asp-controller="Contactoes" asp-action="Create" class="nav-item nav-link">Contacto</a></li>
-                                        <li><a asp-area="" asp-controller="Catalogo" asp-action="Index" class="nav-item nav-link">Catalogo de las casas</a></li>
-                                        <li><a asp-area="" asp-controller="Sesion" asp-action="Index" class="nav-item nav-link">Inicio de sesion</a></li>
+                            @{
+                                @using Microsoft.AspNetCore.Http;
 
-                                        }
-                                        else
-                                        {
-                                           
+                                if (string.IsNullOrEmpty(Context.Session.GetString("Sesion1")))
+                                {
 
-                                        <li><a asp-area="" asp-controller="Home" asp-action="Index" class="nav-item nav-link">Inicio</a></li>
-                                        <li><a asp-area="" asp-controller="Contactoes" asp-action="Create" class="nav-item nav-link">Contacto</a></li>
-                                        <li><a asp-area="" asp-controller="RegistroUsers" asp-action="Create" class="nav-item nav-link">Registro Usuario</a></li>
-                                        <li><a asp-area="" asp-controller="Casas" asp-action="Index" class="nav-item nav-link">Panel de administracion de las casas</a></li>
-                                        <li><a asp-area="" asp-controller="Catalogo" asp-action="Index" class="nav-item nav-link">Catalogo de las casas</a></li>
-                                    <li><a asp-area="" asp-controller="Contactoes" asp-action="Index" class="nav-item nav-link">Mensajes</a></li>
-                                        <li><a asp-area="" asp-controller="Sesion" asp-action="LogOut" class="nav-item nav-link">Cerrar Sesion</a></li>
 
-                                        }
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Index"
+                                            class="nav-item nav-link">Inicio</a></li>
+                                    <li><a asp-area="" asp-controller="Contactoes" asp-action="Create"
+                                            class="nav-item nav-link">Contacto</a></li>
+                                    <li><a asp-area="" asp-controller="Catalogo" asp-action="Index"
+                                            class="nav-item nav-link">Catalogo de las casas</a></li>
+                                    <li><a asp-area="" asp-controller="Sesion" asp-action="Index"
+                                            class="nav-item nav-link">Inicio de sesion</a></li>
 
-                                    }
+                                }
+                                else
+                                {
 
-                                </ul>
-                           
-                       </div>
+
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Index"
+                                            class="nav-item nav-link">Inicio</a></li>
+                                    <li><a asp-area="" asp-controller="Contactoes" asp-action="Create"
+                                            class="nav-item nav-link">Contacto</a></li>
+                                    <li><a asp-area="" asp-controller="RegistroUsers" asp-action="Create"
+                                            class="nav-item nav-link">Registro Usuario</a></li>
+                                    <li><a asp-area="" asp-controller="Casas" asp-action="Index" class="nav-item nav-link">Panel
+                                            de administracion de las casas</a></li>
+                                    <li><a asp-area="" asp-controller="Catalogo" asp-action="Index"
+                                            class="nav-item nav-link">Catalogo de las casas</a></li>
+                                    <li><a asp-area="" asp-controller="Contactoes" asp-action="Index"
+                                            class="nav-item nav-link">Mensajes</a></li>
+                                    <li><a asp-area="" asp-controller="Sesion" asp-action="LogOut"
+                                            class="nav-item nav-link">Cerrar Sesion</a></li>
+
+                                }
+
+                            }
+
+                            </ul>
+
+                        </div>
                         <div class="ml-auto">
                         </div>
                     </div>
@@ -130,18 +142,17 @@
         </div>
 
         @*<footer class="border-top footer text-muted">
-            <div class="container">
-                &copy; 2021 - Imperium - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-            </div>*@
+        <div class="container">
+        &copy; 2021 - Imperium - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>*@
         <!--</footer>-->
-        
-        </div>
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-        @await RenderSectionAsync("Scripts", required: false)
 
-    
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -160,5 +171,6 @@
     <!-- Template Javascript -->
     <script src="/js/main.js"></script>
 </body>
+
 </html>
 

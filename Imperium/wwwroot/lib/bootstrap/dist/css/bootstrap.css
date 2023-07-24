@@ -1564,25 +1564,25 @@ pre code {
 }
 
 .table-hover tbody tr:hover {
-  color: #212529;
-  background-color: rgba(0, 0, 0, 0.075);
+    color: #ffc107;
+    background-color: rgba(0, 0, 0, 0.075);
 }
 
 .table-primary,
 .table-primary > th,
 .table-primary > td {
-  background-color: #b8daff;
+    background-color: #ffc107;
 }
 
-.table-primary th,
-.table-primary td,
-.table-primary thead th,
-.table-primary tbody + tbody {
-  border-color: #7abaff;
-}
+    .table-primary th,
+    .table-primary td,
+    .table-primary thead th,
+    .table-primary tbody + tbody {
+        border-color: #212529;
+    }
 
 .table-hover .table-primary:hover {
-  background-color: #9fcdff;
+    background-color: #bb8c00;
 }
 
 .table-hover .table-primary:hover > td,
@@ -1609,42 +1609,41 @@ pre code {
 
 .table-hover .table-secondary:hover > td,
 .table-hover .table-secondary:hover > th {
-  background-color: #c8cbcf;
+  background-color: dimgrey;
 }
 
 .table-success,
 .table-success > th,
 .table-success > td {
-  background-color: #c3e6cb;
+  background-color: forestgreen;
 }
 
 .table-success th,
 .table-success td,
 .table-success thead th,
 .table-success tbody + tbody {
-  border-color: #8fd19e;
+  border-color: black;
 }
 
 .table-hover .table-success:hover {
-  background-color: #b1dfbb;
+  background-color: green;
 }
 
 .table-hover .table-success:hover > td,
 .table-hover .table-success:hover > th {
-  background-color: #b1dfbb;
+  background-color: lemonchiffon;
 }
 
 .table-info,
 .table-info > th,
 .table-info > td {
-  background-color: #bee5eb;
+  background-color: #fff;
 }
 
 .table-info th,
 .table-info td,
 .table-info thead th,
 .table-info tbody + tbody {
-  border-color: #86cfda;
 }
 
 .table-hover .table-info:hover {
@@ -1795,7 +1794,7 @@ pre code {
   background-color: rgba(255, 255, 255, 0.075);
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 900px) {
   .table-responsive-sm {
     display: block;
     width: 100%;
@@ -6660,7 +6659,7 @@ button.bg-dark:focus {
 }
 
 .border-light {
-  border-color: #f8f9fa !important;
+  border-color: #212529 !important;
 }
 
 .border-dark {
