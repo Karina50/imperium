@@ -104,7 +104,7 @@ namespace Imperium.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Idcasa,Nombre,Precio,DescripcionPropiedad,RentaOventa,TipoVivienda,Superficie,Caracteristicas,Coordenadas,Imagen")] Casa casa)
+        public async Task<IActionResult> Edit(int id, [Bind("Idcasa,Nombre,Precio,DescripcionPropiedad,RentaOventa,TipoVivienda,Superficie,Caracteristicas,Coordenadas,Imagen")] Casa casa, IFormFile archivo)
         {
             if (id != casa.Idcasa)
             {
@@ -115,6 +115,24 @@ namespace Imperium.Controllers
             {
                 try
                 {
+                    if (archivo != null)
+                    {
+                        // Eliminar la imagen anterior si existe
+                        if (!string.IsNullOrEmpty(casa.Imagen))
+                        {
+                            string carpetaAnterior = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Imagenes");
+                            string rutaImagenAnterior = Path.Combine(carpetaAnterior, casa.Imagen);
+
+                            if (System.IO.File.Exists(rutaImagenAnterior))
+                            {
+                                System.IO.File.Delete(rutaImagenAnterior);
+                            }
+                        }
+
+                        // Subir la nueva imagen
+                        casa.Imagen = SubirImagen("Imagenes", archivo);
+                    }
+
                     _context.Update(casa);
                     await _context.SaveChangesAsync();
                 }
@@ -132,6 +150,20 @@ namespace Imperium.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(casa);
+        }
+
+        private string SubirImagen2(string rutaCarpeta, IFormFile ArchivoSubir)
+        {
+            string carpeta = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", rutaCarpeta);
+
+            string Nombrearchivo = Guid.NewGuid().ToString() + "_" + ArchivoSubir.FileName;
+
+            string RutaArchivoUnico = Path.Combine(carpeta, Nombrearchivo);
+
+            using (var InfoArchivo = new FileStream(RutaArchivoUnico, FileMode.Create))
+                ArchivoSubir.CopyTo(InfoArchivo);
+
+            return Nombrearchivo;
         }
 
         // GET: Casas/Delete/5
