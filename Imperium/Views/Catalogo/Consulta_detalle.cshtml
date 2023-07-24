@@ -15,12 +15,19 @@
             <img src="~/Imagenes/@Html.DisplayFor(modelItem => Model.Imagen)" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">@Html.DisplayFor(modelItem => Model.Nombre)</h5>
+                
                 <p class="card-text text-center text-dark">Descripcion de la casa: <br /> @Html.DisplayFor(modelItem => Model.DescripcionPropiedad)  </p>
+                <br />
                 <p class="card-text text-center text-dark">Precio: <br /> @Html.DisplayFor(modelItem => Model.Precio)  </p>
+                <br />
                 <p class="card-text text-center text-dark">Cuenta con una superficie de: <br /> @Html.DisplayFor(modelItem => Model.Superficie)  </p>
+                <br />
                 <p class="card-text text-center text-dark">Esta en: <br /> @Html.DisplayFor(modelItem => Model.RentaOventa)  </p>
+                <br />
                 <p class="card-text text-center text-dark">Sus caracteristicas son: <br /> @Html.DisplayFor(modelItem => Model.Caracteristicas)  </p>
+                <br />
                 <p class="card-text text-center text-dark">El tipo de vivienda es: <br /> @Html.DisplayFor(modelItem => Model.TipoVivienda)  </p>
+                <br />
                 <div class="white-button">
                     <a asp-action="Index">Regresar</a>
                 </div>
