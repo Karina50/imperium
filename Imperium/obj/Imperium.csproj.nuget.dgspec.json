@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\imperium\\Imperium\\Imperium.csproj": {}
+    "D:\\Aps\\WEB\\real-estate\\imperium\\Imperium\\Imperium.csproj": {}
   },
   "projects": {
-    "C:\\imperium\\Imperium\\Imperium.csproj": {
+    "D:\\Aps\\WEB\\real-estate\\imperium\\Imperium\\Imperium.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\imperium\\Imperium\\Imperium.csproj",
+        "projectUniqueName": "D:\\Aps\\WEB\\real-estate\\imperium\\Imperium\\Imperium.csproj",
         "projectName": "Imperium",
-        "projectPath": "C:\\imperium\\Imperium\\Imperium.csproj",
-        "packagesPath": "C:\\Users\\karin\\.nuget\\packages\\",
-        "outputPath": "C:\\imperium\\Imperium\\obj\\",
+        "projectPath": "D:\\Aps\\WEB\\real-estate\\imperium\\Imperium\\Imperium.csproj",
+        "packagesPath": "C:\\Users\\xxraf\\.nuget\\packages\\",
+        "outputPath": "D:\\Aps\\WEB\\real-estate\\imperium\\Imperium\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\karin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\xxraf\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -86,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }

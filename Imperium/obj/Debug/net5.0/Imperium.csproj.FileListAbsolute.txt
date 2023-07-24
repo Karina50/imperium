@@ -970,3 +970,5 @@ D:\Aps\WEB\real-estate\imperium\Imperium\obj\Debug\net5.0\Imperium.genruntimecon
 D:\Aps\WEB\real-estate\imperium\Imperium\obj\Debug\net5.0\ref\Imperium.dll
 C:\imperium\Imperium\obj\Debug\net5.0\Razor\Views\Mensaje\Index.cshtml.g.cs
 C:\imperium\Imperium\obj\Debug\net5.0\Razor\Views\Mensaje\Details.cshtml.g.cs
+D:\Aps\WEB\real-estate\imperium\Imperium\obj\Debug\net5.0\Razor\Views\Mensaje\Details.cshtml.g.cs
+D:\Aps\WEB\real-estate\imperium\Imperium\obj\Debug\net5.0\Razor\Views\Mensaje\Index.cshtml.g.cs
